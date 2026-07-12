@@ -8,7 +8,7 @@ from google.genai import types
 load_dotenv()
 
 api_key = os.getenv("GEMINI_API_KEY")
-model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+model = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
 
 if not api_key:
     raise RuntimeError(
