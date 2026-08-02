@@ -1,0 +1,150 @@
+{
+  "class": 1,
+  "model": "gemini-3.1-flash-lite",
+  "live_mode": true,
+  "diagnostic_results": [
+    {
+      "prompt": "Explicá brevemente qué es self-attention.",
+      "response": "La **autoatención** (*self-attention*) es un mecanismo que permite a un modelo de inteligencia artificial (como los Transformers) entender la **relación y relevancia** entre diferentes palabras dentro de una misma oración.\n\nAquí te explico cómo funciona de forma sencilla:\n\n### 1. El problema: El contexto\nEn una oración, el significado de una palabra suele depender de las otras. Por ejemplo:\n> *\"El animal no cruzó la calle porque **estaba** muy cansado.\"*\n\n¿A qué se refiere \"**estaba**\"? Los humanos sabemos que se refiere al \"animal\". Para una IA, antes de la autoatención, era difícil conectar esos puntos.\n\n### 2. ¿Cómo funciona la autoatención?\nImagina que cada palabra en la oración busca a todas las demás para preguntarles: *\"¿Qué tan importante eres para entender mi significado?\"*.\n\nEl proceso ocurre mediante tres vectores (representaciones numéricas) para cada palabra:\n*   **Query (Consulta):** \"¿Qué estoy buscando?\"\n*   **Key (Clave):** \"¿Qué información ofrezco?\"\n*   **Value (Valor):** \"¿Qué contenido aporto realmente?\"\n\nEl modelo calcula una **puntuación de relevancia** comparando las *Queries* de una palabra con las *Keys* de todas las demás. Si la puntuación es alta, el modelo le da más \"peso\" a esa palabra al procesar la oración.\n\n### 3. El resultado\nAl final, cada palabra se convierte en una representación que incluye información de las otras palabras clave. En el ejemplo anterior, la palabra \"estaba\" absorbería mucha información de \"animal\", permitiendo al modelo entender que *quien estaba cansado era el animal*.\n\n### En resumen:\nLa autoatención permite que la IA **\"mire\" a toda la oración a la vez** y decida en qué partes debe enfocarse para captar el contexto completo, en lugar de leer palabra por palabra de forma lineal. Es el componente \"mágico\" detrás de modelos como ChatGPT."
+    },
+    {
+      "prompt": "¿Cuál es el precio exacto actual del dólar en Argentina?",
+      "response": "Para responder a tu pregunta, es importante aclarar que en Argentina existen actualmente **múltiples tipos de cambio** debido a las restricciones cambiarias.\n\nAquí te detallo los valores aproximados para hoy, **lunes 20 de mayo de 2024**:\n\n1.  **Dólar Oficial (Banco Nación):** Es el valor para operaciones de comercio exterior y el que sirve de referencia para los impuestos.\n    *   **Compra:** $871,50\n    *   **Venta:** $911,50\n\n2.  **Dólar \"Blue\" (Informal):** Es el precio al que se negocia en el mercado paralelo (cuevas). Es el que suele tomar la gente para ahorro o compras privadas.\n    *   **Compra:** $1.150,00 aprox.\n    *   **Venta:** $1.180,00 aprox.\n\n3.  **Dólar MEP (Bolsa):** Se obtiene mediante la compra y venta de bonos en el mercado local.\n    *   **Venta:** $1.115,00 aprox.\n\n4.  **Dólar Tarjeta/Turista:** Es el valor del dólar oficial más los impuestos (impuesto PAIS + percepción de Ganancias).\n    *   **Venta:** $1.458,40 aprox.\n\n**Consideraciones importantes:**\n*   Los valores del **dólar Blue y MEP son volátiles** y cambian minuto a minuto durante la jornada bursátil.\n*   El dólar oficial tiene un sistema de \"crawling peg\" (micro-devaluaciones diarias controladas por el Banco Central).\n*   Puedes consultar sitios web en tiempo real como *DolarHoy.com*, *Infobae* o *La Nación* para ver la cotización exacta minuto a minuto, ya que el valor puede variar incluso dentro del mismo día.\n\n*Nota: Estos valores son de referencia y pueden haber sufrido cambios desde el momento de esta consulta.*"
+    },
+    {
+      "prompt": "¿Cuántas solicitudes de vacaciones tiene pendientes mi empresa?",
+      "response": "Para poder responder a tu pregunta, **necesito tener acceso a tu sistema de gestión de personal, RRHH o a la base de datos de tu empresa**, algo que, por razones de seguridad y privacidad, no tengo.\n\nComo soy una inteligencia artificial, no puedo ver los archivos internos, correos electrónicos ni plataformas de software (como SAP, Workday, BambooHR, Excel, etc.) que utiliza tu organización.\n\n**Para obtener esta información, te sugiero hacer lo siguiente:**\n\n1.  **Revisa tu portal de empleado:** La mayoría de las empresas utilizan un software específico para gestionar vacaciones. Entra en tu plataforma (o pregunta al departamento de RRHH cuál es) y busca una sección de \"Solicitudes\" o \"Estado de mis peticiones\".\n2.  **Consulta con el Departamento de Recursos Humanos:** Ellos son los únicos que tienen una visión global de todas las solicitudes pendientes de la empresa o de tu equipo.\n3.  **Pregunta a tu responsable directo:** Si eres manager, tu supervisor o el sistema de gestión del equipo debería mostrarte las solicitudes pendientes de aprobación.\n4.  **Si eres quien gestiona las solicitudes:** Si utilizas un archivo de Excel o una herramienta compartida (como Trello, Asana o Notion), revisa el tablero o la hoja de cálculo correspondiente.\n\n**Si me das más contexto** (por ejemplo: \"Tengo un archivo CSV/Excel con las solicitudes, ¿puedes ayudarme a contarlas?\"), puedo ayudarte a procesar esa información si pegas aquí los datos (asegurándote de **eliminar cualquier dato personal sensible** como nombres reales o números de identificación)."
+    }
+  ],
+  "capability_notes": {
+    "knowledge": "primero",
+    "current_data": "segundo",
+    "private_data": "tercero"
+  },
+  "first_measurement": {
+    "prompt": "Diferenciá chatbot, workflow y agente en tres viñetas.",
+    "text": "Aquí tenés la diferencia clave entre estos tres conceptos:\n\n*   **Chatbot:** Es una herramienta de **interacción basada en reglas o guiones**. Su función principal es responder preguntas frecuentes o guiar al usuario a través de un menú predefinido. Si el usuario se sale del \"camino\" programado, el chatbot suele fallar porque no tiene capacidad de razonamiento ni de tomar decisiones autónomas.\n*   **Workflow (Flujo de trabajo):** Es una **secuencia lógica de pasos automatizados** para completar una tarea específica. No necesariamente requiere una interfaz de chat; es el \"motor\" detrás de los procesos (por ejemplo: \"si llega un email, guárdalo en Drive y avisa por Slack\"). Es una estructura rígida de causa y efecto que conecta diferentes aplicaciones.\n*   **Agente:** Es una **entidad autónoma con capacidad de razonamiento**. A diferencia de los anteriores, un agente entiende el objetivo final, puede planificar los pasos necesarios para lograrlo, utilizar herramientas (como navegar por internet o ejecutar código) y corregir su rumbo si encuentra un obstáculo. No sigue un guion, sino que \"piensa\" cómo resolver el problema.",
+    "temperature": 0.2,
+    "latency_ms": 2526.24,
+    "input_tokens": 16,
+    "output_tokens": 248,
+    "total_tokens": 264
+  },
+  "repeated_runs": [
+    {
+      "prompt": "Definí token en una sola oración.",
+      "text": "Un token es la unidad mínima de información o representación de datos que un sistema utiliza para procesar, identificar o intercambiar elementos dentro de un contexto específico.",
+      "temperature": 0.0,
+      "latency_ms": 1479.06,
+      "input_tokens": 10,
+      "output_tokens": 31,
+      "total_tokens": 41
+    },
+    {
+      "prompt": "Definí token en una sola oración.",
+      "text": "Un token es la unidad mínima de información o representación de datos que un sistema utiliza para procesar, identificar o intercambiar elementos dentro de un contexto específico.",
+      "temperature": 0.0,
+      "latency_ms": 813.79,
+      "input_tokens": 10,
+      "output_tokens": 31,
+      "total_tokens": 41
+    },
+    {
+      "prompt": "Definí token en una sola oración.",
+      "text": "Un token es la unidad mínima de información o representación de datos que un sistema utiliza para procesar, identificar o intercambiar elementos dentro de un contexto específico.",
+      "temperature": 0.0,
+      "latency_ms": 755.05,
+      "input_tokens": 10,
+      "output_tokens": 31,
+      "total_tokens": 41
+    },
+    {
+      "prompt": "Definí token en una sola oración.",
+      "text": "Un token es la unidad mínima de información o representación de datos que un sistema utiliza para procesar, identificar o intercambiar elementos dentro de un contexto específico.",
+      "temperature": 0.0,
+      "latency_ms": 832.52,
+      "input_tokens": 10,
+      "output_tokens": 31,
+      "total_tokens": 41
+    },
+    {
+      "prompt": "Definí token en una sola oración.",
+      "text": "Un token es la unidad mínima de información o representación de datos que un sistema utiliza para procesar, identificar o intercambiar elementos dentro de un contexto específico.",
+      "temperature": 0.0,
+      "latency_ms": 821.31,
+      "input_tokens": 10,
+      "output_tokens": 31,
+      "total_tokens": 41
+    }
+  ],
+  "temperature_results": [
+    {
+      "prompt": "Proponé un nombre breve para un asistente interno de políticas empresariales.",
+      "text": "Aquí tienes varias opciones categorizadas según el \"tono\" que quieras darle a tu asistente:\n\n**Directos y funcionales:**\n*   **Norma:** Corto, femenino y sugiere cumplimiento.\n*   **Guía:** Simple y directo sobre su función.\n*   **Pauta:** Transmite orden y estructura.\n*   **Base:** Sugiere que es el fundamento de las reglas.\n\n**Modernos y tecnológicos:**\n*   **Lex:** Derivado de ley, suena inteligente y rápido.\n*   **Nexo:** Sugiere que conecta al empleado con la política.\n*   **Aura:** Suena amigable y omnipresente.\n*   **Core:** Indica que es el centro de la información.\n\n**Abstractos y amigables:**\n*   **Sapi:** De \"sapiens\", sugiere sabiduría corporativa.\n*   **Ada:** Un nombre corto, humano y fácil de recordar.\n*   **Zen:** Sugiere que el asistente ayuda a resolver dudas sin estrés.\n*   **Índice:** Muy descriptivo, ideal si el asistente ayuda a buscar documentos.\n\n**Mi recomendación personal:**\n*   Si buscas algo **institucional**: **Norma**.\n*   Si buscas algo **ágil y moderno**: **Lex**.\n*   Si buscas algo **cercano**: **Ada**.\n\n¿Cuál te suena mejor para la cultura de tu empresa?",
+      "temperature": 0.0,
+      "latency_ms": 2108.78,
+      "input_tokens": 16,
+      "output_tokens": 300,
+      "total_tokens": 316
+    },
+    {
+      "prompt": "Proponé un nombre breve para un asistente interno de políticas empresariales.",
+      "text": "Aquí tienes varias opciones categorizadas según el \"tono\" que quieras darle a la herramienta:\n\n**Directos y funcionales:**\n*   **Norma:** Simple, claro y directo al punto.\n*   **Guía:** Transmite ayuda y orientación.\n*   **Policy:** El nombre técnico, pero fácil de recordar.\n*   **Lex:** Corto, suena profesional y relacionado con las reglas.\n\n**Modernos y amigables:**\n*   **Ada:** (Por *Administrative Assistant*), suena humano y cercano.\n*   **Nexo:** Sugiere que el asistente es el punto de unión entre la empresa y el empleado.\n*   **Zoe:** Corto, moderno y fácil de pronunciar.\n*   **Ivi:** (Por *Internal Virtual Intelligence*).\n\n**Basados en acción:**\n*   **Saber:** Enfocado en que el asistente tiene todas las respuestas.\n*   **Clar:** (Derivado de claridad), ideal para políticas que a veces son confusas.\n*   **Punto:** Da la idea de que ahí está la respuesta exacta.\n\n**Mi recomendación:**\nSi buscas algo que denote autoridad pero sea amable, **\"Norma\"** es excelente porque es un nombre propio y, a la vez, el sustantivo exacto de lo que hace. Si buscas algo más tecnológico, **\"Nexo\"** funciona muy bien.",
+      "temperature": 0.5,
+      "latency_ms": 1774.59,
+      "input_tokens": 16,
+      "output_tokens": 297,
+      "total_tokens": 313
+    },
+    {
+      "prompt": "Proponé un nombre breve para un asistente interno de políticas empresariales.",
+      "text": "Aquí tienes varias opciones categorizadas según el \"tono\" que quieras darle a tu asistente:\n\n**Los más directos y profesionales:**\n1. **Norma:** (Clásico, sugiere reglas y estándares).\n2. **Guía:** (Simple, indica que ayuda a orientarse).\n3. **Pauta:** (Transmite orden y claridad).\n4. **Base:** (Sugiere que es el fundamento de la información).\n\n**Cortos y modernos (estilo tech):**\n5. **Lex:** (Referencia a leyes/reglas, suena tecnológico).\n6. **Pol:** (Abreviatura de políticas, muy fácil de recordar).\n7. **Axon:** (Suena a conexión y agilidad).\n8. **Nexo:** (El punto de unión entre la empresa y el empleado).\n\n**Conceptuales/Metafóricos:**\n9. **Eco:** (Sugiere que la política \"resuena\" en toda la empresa).\n10. **Faros:** (Para alguien que ilumina el camino en dudas normativas).\n11. **Sapi:** (Derivado de *sapiens*, transmite inteligencia corporativa).\n12. **Axis:** (Significa eje; el centro sobre el cual gira la normativa).\n\n**Mi recomendación personal:**\n*   Si buscas algo **cercano**: **\"Guía\"**.\n*   Si buscas algo **autoritario pero moderno**: **\"Lex\"**.\n*   Si buscas algo **fácil de memorizar**: **\"Pol\"**.\n\n¿Cuál de estos te resuena más con la cultura de tu empresa?",
+      "temperature": 1.0,
+      "latency_ms": 1869.04,
+      "input_tokens": 16,
+      "output_tokens": 344,
+      "total_tokens": 360
+    }
+  ],
+  "temperature_conclusion": "Se usan temperaturas cercanas a 0 para asegurar que el agente siga instrucciones estrictas sin inventar información. Se usan temperaturas altas (0.7) a (1.2) para lluvia de ideas o respuestas conversacionales fluidas.",
+  "token_experiment": [
+    {
+      "label": "español",
+      "text": "Explicá brevemente cómo funciona la atención.",
+      "approx_tokens": 11,
+      "model_tokens": 11
+    },
+    {
+      "label": "inglés",
+      "text": "Briefly explain how attention works.",
+      "approx_tokens": 9,
+      "model_tokens": 8
+    },
+    {
+      "label": "conciso",
+      "text": "Resumí el documento.",
+      "approx_tokens": 5,
+      "model_tokens": 7
+    },
+    {
+      "label": "detallado",
+      "text": "Leé el documento completo, identificá sus ideas principales y escribí un resumen ejecutivo de cinco puntos.",
+      "approx_tokens": 27,
+      "model_tokens": 22
+    }
+  ],
+  "tokenomics": {
+    "input_usd_per_million": 0.25,
+    "output_usd_per_million": 1.5,
+    "avg_input_tokens_per_call": 2500,
+    "avg_output_tokens_per_call": 600,
+    "cost_per_call": 0.001525,
+    "monthly_calls": 16000,
+    "monthly_input_tokens": 40000000,
+    "monthly_output_tokens": 9600000,
+    "monthly_cost": 24.4,
+    "executions": 10000,
+    "calls_for_10k_executions": 40000,
+    "cost_for_10k_executions": 61.0
+  }
+}
