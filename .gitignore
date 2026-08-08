@@ -1,4 +1,6 @@
 .env
+.env.example.pepito
+.env.pepito
 .venv/
 __pycache__/
 *.pyc
