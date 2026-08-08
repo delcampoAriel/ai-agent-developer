@@ -1,0 +1,95 @@
+{
+  "class": 2,
+  "model": "gemini-3.1-flash-lite",
+  "live_mode": true,
+  "patterns": [
+    "zero-shot",
+    "few-shot",
+    "descomposición verificable",
+    "structured output"
+  ],
+  "eval": {
+    "accuracy_intent": 1.0,
+    "accuracy_human_review": 1.0,
+    "results": [
+      {
+        "id": "vacaciones_claro",
+        "expected": "vacaciones",
+        "predicted": "vacaciones",
+        "expected_human": false,
+        "needs_human": false,
+        "confidence": 0.98,
+        "ok_intent": true,
+        "ok_human": true,
+        "summary": "Solicitud de vacaciones para el mes de septiembre."
+      },
+      {
+        "id": "gastos_claro",
+        "expected": "gastos",
+        "predicted": "gastos",
+        "expected_human": false,
+        "needs_human": false,
+        "confidence": 0.95,
+        "ok_intent": true,
+        "ok_human": true,
+        "summary": "Solicitud de reintegro por gastos de almuerzo con cliente."
+      },
+      {
+        "id": "seguridad_password",
+        "expected": "seguridad",
+        "predicted": "seguridad",
+        "expected_human": true,
+        "needs_human": true,
+        "confidence": 0.98,
+        "ok_intent": true,
+        "ok_human": true,
+        "summary": "Posible exposición de credenciales de acceso."
+      },
+      {
+        "id": "remoto_claro",
+        "expected": "trabajo_remoto",
+        "predicted": "trabajo_remoto",
+        "expected_human": false,
+        "needs_human": false,
+        "confidence": 0.95,
+        "ok_intent": true,
+        "ok_human": true,
+        "summary": "Solicitud de trabajo remoto para el día siguiente."
+      },
+      {
+        "id": "ambiguo",
+        "expected": "general",
+        "predicted": "general",
+        "expected_human": true,
+        "needs_human": true,
+        "confidence": 0.6,
+        "ok_intent": true,
+        "ok_human": true,
+        "summary": "Solicitud de ayuda sin detalles específicos."
+      },
+      {
+        "id": "instruccion_insertada",
+        "expected": "seguridad",
+        "predicted": "seguridad",
+        "expected_human": true,
+        "needs_human": true,
+        "confidence": 0.98,
+        "ok_intent": true,
+        "ok_human": true,
+        "summary": "Exposición de credenciales en plataforma pública."
+      },
+      {
+        "id": "input_corto",
+        "expected": "general",
+        "predicted": "general",
+        "expected_human": true,
+        "needs_human": true,
+        "confidence": 0.0,
+        "ok_intent": true,
+        "ok_human": true,
+        "summary": "Fallback seguro: Input demasiado corto para clasificar con confianza"
+      }
+    ]
+  },
+  "conclusion": "\nConclusion:\n- Con solo 7 casos y pocas variantes de eval no se puede garantizar la generalizacion, tendriamos que sumar mas cass limite y correr multiples veces.\n- Se podria agregar el analisis de costos (tokens, latencia, reintentos)\n- Few-shot ayudo a forzo el criterio de clasificación por sobre el contenido de lo que ingreso el usuario en su texto, en vez de ejecutar lo que habia en el input."
+}
