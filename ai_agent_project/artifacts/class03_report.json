@@ -1,10 +1,10 @@
 {
   "class": 3,
-  "mode": "simulated",
+  "mode": "real",
   "model": "gemini-3.1-flash-lite",
   "configuration": {
     "app_env": "development",
-    "use_real_gemini": false,
+    "use_real_gemini": true,
     "default_model": "gemini-3.1-flash-lite",
     "request_timeout_seconds": 20.0,
     "max_retries": 2,
@@ -26,10 +26,10 @@
     "app.py"
   ],
   "concurrency_experiment": {
-    "sequential_ms": 486.3,
-    "concurrent_ms": 161.9,
+    "sequential_ms": 486.7,
+    "concurrent_ms": 161.8,
     "max_concurrency": 3,
-    "observed_speedup": 3.0
+    "observed_speedup": 3.01
   },
   "retry_demo": {
     "attempts": 2,
@@ -45,7 +45,7 @@
   "streaming_demo": {
     "chunks": 11,
     "first_chunk_ms": 11.1,
-    "total_ms": 120.7
+    "total_ms": 121.6
   },
   "conversation_demo": {
     "session_id": 6,
@@ -69,12 +69,20 @@
     {
       "test": "history_window",
       "status": "PASS"
+    },
+    {
+      "test": "route_prefers_local_for_sensitive_text",
+      "status": "PASS"
+    },
+    {
+      "test": "app_routes_sensitive_message_to_local_at_zero_cost",
+      "status": "PASS"
     }
   ],
   "student_decision": {
-    "improvement": "",
-    "reason": "",
-    "test_added": "",
-    "tradeoff": ""
+    "improvement": "routing_por_privacidad_costo",
+    "reason": "Reutiliza el patrón de providers intercambiables de la sección 5: agrega valor real (evita mandar datos sensibles a un provider externo, corta gasto cuando se agota el presupuesto) sin tocar el código que ya llama a ConversationApp.ask().",
+    "test_added": "test_route_prefers_local_for_sensitive_text, test_route_prefers_remote_when_budget_available, test_route_falls_back_to_local_when_budget_exhausted, test_app_routes_sensitive_message_to_local_at_zero_cost, test_app_routes_normal_message_to_remote_with_cost (en ai_agent_project/tests/test_class03.py)",
+    "tradeoff": "El chequeo de presupuesto lee spent_usd antes de llamar al provider y lo actualiza después; con llamadas concurrentes (asyncio.gather) dos requests podrían ver el mismo presupuesto disponible y sobregastar levemente. El costo del provider local se hardcodea en 0.0, lo cual simplifica el demo pero ignora que un modelo local real sí consume cómputo."
   }
 }
