@@ -1,1 +1,1 @@
-{"event_id": "c79beea7-e758-4d75-ada4-0c129965702a", "run_id": "run-demo", "session_id": "session-demo", "event": "run.started", "timestamp": "2026-08-08T20:31:54.378484+00:00", "payload": {"provider": "fake", "model": "fake:gemini-3.1-flash-lite"}}
+{"event_id": "cbfbdae0-db23-4454-ac17-0fb47499a3fd", "run_id": "run-demo", "session_id": "session-demo", "event": "run.started", "timestamp": "2026-08-20T19:15:15.426656+00:00", "payload": {"provider": "fake", "model": "fake:gemini-3.1-flash-lite"}}
